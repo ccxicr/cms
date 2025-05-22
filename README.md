@@ -6,36 +6,36 @@ This repository contains an AWS CDK project written in TypeScript that deploys a
 
 ## Limitations
 
-Although this stack does deploy a resonably complete multi AZ solution, there are still many limitations due to severe time constraints, not limited to but including:
+Although this stack does deploy a resonably complete multi AZ solution, there are still many limitations due to severe time constraints. These can all be addressed reasonably quickly with a bit more time. They are not limited to but including:
 
 ### Observability
-No CloudWatch dashboards for ECS, ALB or RDS
-No alarms on CPU, memory, error rates, database connections or request latency
+* No CloudWatch dashboards for ECS, ALB or RDS
+* No alarms on CPU, memory, error rates, database connections or request latency
 
 ### Logging
-No VPC flow logs
-Log group retentions are not set high enough for real production
+* No VPC flow logs
+* Log group retentions are not set high enough for real production
 
 ### Backup
-RDS snapshots live only in one region
-No cross-region or cross-account copy of database backups
+* RDS snapshots live only in one region
+* No cross-region or cross-account copy of database backups
 
 ### High availability
-No RDS read replicas for read-heavy workloads
-ECS deploys rolling updates only, no blue-green or canary deployment strategy
+* No RDS read replicas for read-heavy workloads
+* ECS deploys rolling updates only, no blue-green or canary deployment strategy
 
 ### Security enhancements
-Secrets Manager credentials lack automatic rotation
-Container images come straight from Docker Hub with no vulnerability scan
-IAM roles and policies could be tightened to enforce least privilege
+* Secrets Manager credentials lack automatic rotation
+* Container images come straight from Docker Hub with no vulnerability scan
+* IAM roles and policies could be tightened to enforce least privilege
 
 ### Compliance and drift detection
-No AWS Config rules or detection alerts
-Only a generic compliance tag is applied
+* No AWS Config rules or detection alerts
+* Only a generic compliance tag is applied
 
 ### CI/CD and automated testing
-No pipeline to build, test and deploy changes
-No linting or security checks before deployment
+* No pipeline to build, test and deploy changes
+* No linting or security checks before deployment
 
 
 ## Prerequisites
