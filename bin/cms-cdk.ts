@@ -9,9 +9,9 @@ import { EdgeStack } from '../lib/edge-stack';
 const app = new cdk.App();
 
 //Certificates need to exist in the account for the domain name defined here.
-const domainName = 'icrtemp.com';
-const cfCertificateArn = 'arn:aws:acm:us-east-1:609862926776:certificate/3b1c3ddb-35a8-4bcd-83f8-57f33704e961';
-const originCertificateArn = 'arn:aws:acm:ap-southeast-2:609862926776:certificate/56d47f71-46f8-4ee2-aac3-b697c6bf25f7';
+const domainName = 'domain.com';
+const cfCertificateArn = 'arn:aws:acm:us-east-1:';
+const originCertificateArn = 'arn:aws:acm:ap-southeast-2:';
 
 const sydEnv = { 
   account: process.env.CDK_DEFAULT_ACCOUNT, 
